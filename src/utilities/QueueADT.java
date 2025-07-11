@@ -64,22 +64,6 @@ public interface QueueADT<E> extends Serializable {
     E[] toArray(E[] copy);
 
     /**
-     * This method searches for an element in the queue and returns the index of the first match.
-     *
-     * @param item the element to be searched for
-     * @return the index if found; otherwise -1
-     */
-    int search(E item);
-
-    /**
-     * This method checks if the queue contains the specified element.
-     *
-     * @param item the element to check for
-     * @return true if the element is in the queue
-     */
-    boolean contains(E item);
-
-    /**
      * This method returns the number of elements currently in the queue.
      *
      * @return the current size of the queue
@@ -94,7 +78,14 @@ public interface QueueADT<E> extends Serializable {
     boolean isEmpty();
 
     /**
+     * This method checks whether the queue is full for fixed size.
+     *
+     * @return true if the queue is full
+     */
+    boolean isFull();
+
+    /**
      * This method removes all elements from the queue.
      */
-    void clear();
+    void dequeueAll();
 }
