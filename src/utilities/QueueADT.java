@@ -80,7 +80,7 @@ public interface QueueADT<E> extends Serializable {
     /**
      * This method checks whether the queue is full for fixed size.
      *
-     * @return true if the queue contains no elements
+     * @return true if the queue is full
      */
     boolean isFull();
 
